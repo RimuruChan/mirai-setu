@@ -23,17 +23,18 @@ Mirai 是一个在全平台下运行，提供 QQ 协议支持的高效率机器�
 
 由于作者学业压力较大，不能保证插件的及时更新以及bug修复。
 
+插件暂时停更，作者需要考研。月底恢复
 ## 使用说明
 1. 环境配置
     - 插件开发环境为mirai-console-1.0.0版本，其他版本的[mirai-console](https://github.com/mamoe/mirai-console) 不保证能100%兼容。如果使用其他版本的请自行尝试是否兼容。
-    如果你不清楚mirai-console如何运行，可以使用我自己打包的mirai-console-1.0.0的包。链接：https://pan.baidu.com/s/1WjwsjX1kSMCom2_aJSZBtQ 提取码：setu
+    如果你不清楚mirai-console如何运行，可以使用我自己打包的mirai-console-1.0.0的包。链接：https://pan.baidu.com/s/1WjwsjX1kSMCom2_aJSZBtQ 提取码hui'fu恢复：setu
     - mirai-console需要java环境，建议使用java11以及以上的版本运行。
 2. 插件下载
     - 前往本项目的[releases](https://github.com/meaningtree/mirai-setu/releases)下载插件
 3. 插件运行
     - 将本放入mirai-console的plugins的文件夹然后运行mirai-console。
 4. 插件配置
-    - 方法一：运行mirai输入控制台/serkey /setmaster对插件配置（/help可以查看帮助）
+    - 方法一：运行mirai输入控制台/serkey /setmaster对插件配置（/help可以查看帮助，建议使用）
     - 方法二：运行一次mirai-console关闭（记得一定要关闭mirai-console，否则修改的数值很可能会被mirai-console覆盖掉），进入./config/Mirai-setu文件夹参考注释修改配置文件。
 5. 关于lollicon的注意事项
     - lolicon是一个公开的setu库的APi，此API不属于本人，如果此API出现问题，恕我无力解决。图片获取是从i.pixiv.cat反向代理得到的，可以不使用科学上网获取，但是国内网络获取比较慢，获取卡顿和失败是正常情况。如果有条件的话可以使用科学上网进行加速，或者部署到没有限制的服务器上。
