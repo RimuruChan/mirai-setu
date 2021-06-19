@@ -2,8 +2,9 @@ package moe.ruabbit.mirai.search
 
 import io.ktor.util.*
 import moe.ruabbit.mirai.config.CommandConfig
+import moe.ruabbit.mirai.data.SetuData
 import net.mamoe.mirai.event.GlobalEventChannel
-import net.mamoe.mirai.event.subscribeMessages
+import net.mamoe.mirai.event.subscribeGroupMessages
 import net.mamoe.mirai.message.data.Image
 import net.mamoe.mirai.message.data.MessageSource.Key.quote
 import net.mamoe.mirai.message.data.time
@@ -11,9 +12,12 @@ import net.mamoe.mirai.message.nextMessage
 
 @KtorExperimentalAPI
 fun searchListenerRegister() {
-    GlobalEventChannel.subscribeMessages {
+    GlobalEventChannel.subscribeGroupMessages {
         always {
             if (message.contentToString().startsWith(CommandConfig.searchByImage)) {
+                if (SetuData.groupPolicy[group.id] == null) {
+                    subject.sendMessage(message.quote() + "本群没有开启插件!")
+                }
                 val sauceNao = SauceNaoRequester(subject)
                 val image = message[Image]
                 if (image == null) {
