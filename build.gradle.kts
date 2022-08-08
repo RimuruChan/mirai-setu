@@ -1,6 +1,6 @@
 plugins {
     val kotlinVersion = "1.5.10"
-    val miraiVersion = "2.6.5"
+    val miraiVersion = "2.7-M2"
 
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.serialization") version kotlinVersion
